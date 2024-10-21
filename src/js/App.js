@@ -42,7 +42,7 @@ function App() {
         <div className="login-user-pass-container">
           <form onSubmit={handleLogin}>
             <div>
-              <label htmlFor="username">Username:</label>
+            <label htmlFor="username" className="form-user-pass-label" >Username:</label>
               <input
                 type="text"
                 id="username"
@@ -52,7 +52,7 @@ function App() {
               />
             </div>
             <div>
-              <label htmlFor="password">Password:</label>
+              <label htmlFor="password" className="form-user-pass-label" >Password:</label>
               <input
                 type="password"
                 id="password"

@@ -30,6 +30,9 @@ function Signup() {
       setUsername('');
       setPassword('');
       setConfirmPassword('');
+
+      // Redirects to login page
+      window.location.href = '/login';
     } else {
       setError(result.message);
     }
@@ -46,7 +49,7 @@ function Signup() {
         <div className="login-user-pass-container">
           <form onSubmit={handleSignup}>
             <div>
-              <label htmlFor="username">Username:</label>
+              <label htmlFor="username" className="form-user-pass-label" >Username:</label>
               <input
                 type="text"
                 id="username"
@@ -56,7 +59,7 @@ function Signup() {
               />
             </div>
             <div>
-              <label htmlFor="password">Password:</label>
+              <label htmlFor="password" className="form-user-pass-label" >Password:</label>
               <input
                 type="password"
                 id="password"
@@ -66,7 +69,7 @@ function Signup() {
               />
             </div>
             <div>
-              <label htmlFor="confirmPassword">Confirm Password:</label>
+              <label htmlFor="confirmPassword" className="form-user-pass-label" >Confirm Password:</label>
               <input
                 type="password"
                 id="confirmPassword"
@@ -75,7 +78,7 @@ function Signup() {
                 required
               />
             </div>
-            {error && <p className="error-message">{error}</p>}
+            {error && <p className="form-user-pass-label">{error}</p>}
             <button type="submit">Sign Up</button>
           </form>
         </div>
